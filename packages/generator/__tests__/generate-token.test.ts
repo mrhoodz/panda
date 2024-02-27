@@ -731,7 +731,7 @@ describe('generator', () => {
         semanticTokens: {},
         breakpoints: {},
       },
-      cssVars: {
+      globalVars: {
         '--random-color': 'red',
         '--button-color': {
           syntax: '<color>',

@@ -838,7 +838,7 @@ describe('generate property types', () => {
     `)
   })
 
-  test('with cssVars', () => {
+  test('with globalVars', () => {
     expect(
       generatePropTypes(
         createContext({
@@ -847,7 +847,7 @@ describe('generate property types', () => {
               return utils.omit(config, ['utilities', 'theme.tokens', 'theme.semanticTokens'])
             },
           },
-          cssVars: {
+          globalVars: {
             '--random-color': 'red',
             '--button-color': {
               syntax: '<color>',

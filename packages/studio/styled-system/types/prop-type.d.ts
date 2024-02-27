@@ -312,8 +312,6 @@ interface PropertyValueTypes {
 	y: Shorthand<"translateY">;
 }
 
-
-
 type StrictableProps =
   | 'alignContent'
   | 'alignItems'
