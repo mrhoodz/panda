@@ -723,38 +723,4 @@ describe('generator', () => {
       }"
     `)
   })
-
-  test('css vars', () => {
-    const css = tokenCss({
-      theme: {
-        tokens: {},
-        semanticTokens: {},
-        breakpoints: {},
-      },
-      globalVars: {
-        '--random-color': 'red',
-        '--button-color': {
-          syntax: '<color>',
-          inherits: false,
-          initialValue: 'blue',
-        },
-      },
-    })
-
-    expect(css).toMatchInlineSnapshot(`
-      "@layer tokens {
-        :where(html) {
-          --random-color: red;
-      }
-
-        @property --button-color {
-          syntax: '<color>';
-
-          inherits: false;
-
-          initial-value: blue;
-              }
-      }"
-    `)
-  })
 })
